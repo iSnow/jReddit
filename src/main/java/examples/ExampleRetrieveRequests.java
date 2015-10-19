@@ -2,6 +2,9 @@ package examples;
 
 import java.util.List;
 
+import com.github.jreddit.parser.entity.UserInfo;
+import com.github.jreddit.parser.listing.UserInfoParser;
+import com.github.jreddit.request.retrieval.user.AboutUserRequest;
 import org.apache.http.impl.client.HttpClientBuilder;
 
 import com.github.jreddit.oauth.RedditOAuthAgent;
@@ -65,6 +68,24 @@ public class ExampleRetrieveRequests {
         example.exampleSubmissionsOfUser();
         example.exampleMixedOfUser();
         example.exampleFullSubmission();
+        example.exampleAboutUserRequest();
+    }
+
+    public void exampleAboutUserRequest() throws  RedditParseException, RedditOAuthException {
+        // Create token (will be valid for 1 hour)
+        RedditToken token = agent.tokenAppOnly(false);
+
+        // Create parser for request
+        UserInfoParser parser = new UserInfoParser();
+
+        // Create the request
+        AboutUserRequest request = new AboutUserRequest("jRedditBot");
+
+        // Perform and parse request, and store parsed result
+        UserInfo userInfo = parser.parse(client.get(token, request));
+
+        // Now print out the result (don't care about formatting)
+        System.out.println(userInfo);
     }
     
     public void exampleSubmissionsOfSubreddit() throws RedditParseException, RedditOAuthException {
