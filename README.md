@@ -12,14 +12,34 @@ jReddit is a wrapper for the Reddit API written in Java. Project started by Omer
 ### How to use jReddit?
 *We are currently in the transitional phase between cookie-based authentication and OAuth2. The previous version of jReddit (1.0.3), which uses the former, will no longer be supported by reddit beginning August. The latter is supported by the latest version of jReddit (1.0.4).*
 
-#### Latest version: 1.0.4
-The latest version (1.0.4) can only be included by forking or directly copying source. When the build is stable, we will distribute it via Maven (as done with previous versions).
+#### Latest version: 1.1.0
+The latest version (1.1.0) can only be included from Jitpack or directly copying source. When the build is stable, we will distribute it via Maven Central (as done with previous versions).
+
+First add Jitpack to your repositories list:
+```
+<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+
+Then include it as a dependency
+```
+	<dependency>
+	    <groupId>com.github.iSnow</groupId>
+	    <artifactId>jReddit</artifactId>
+	    <version>84780d47cd</version>
+	</dependency>
+```
 
 #### Old version (deprecated): 1.0.3
 
 At the moment, jReddit 1.0.3 can be included in your project using:
 
 ##### Maven
+
 ```
 <dependency>
         <groupId>com.github.jreddit</groupId>
