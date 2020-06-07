@@ -73,7 +73,7 @@ public class RedditOAuthAgent {
     private final String userAgent;
     
     /** OAuth2 client for OAuth related requests. */
-    private OAuthClient oAuthClient;
+    private final OAuthClient oAuthClient;
     
     /** Reddit application. */
     private RedditApp redditApp;

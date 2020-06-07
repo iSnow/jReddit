@@ -32,7 +32,7 @@ public class RedditListingParser {
      * 
      * @param response Object returned by JSON parser
      * 
-     * @throws RedditRequestException If the response is not valid listing of reddit things
+     * @throws RedditParseException If the response is not valid listing of reddit things
      */
     public void validate(Object response) throws RedditParseException {
         

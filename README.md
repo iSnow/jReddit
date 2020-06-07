@@ -4,9 +4,10 @@ jReddit
 [![Build Status](https://travis-ci.org/jReddit/jReddit.png?branch=master)](https://travis-ci.org/jReddit/jReddit)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.jreddit/jreddit/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.github.jreddit/jreddit)
 [![Coverage Status](https://coveralls.io/repos/jReddit/jReddit/badge.svg)](https://coveralls.io/r/jReddit/jReddit)
+[![Jitpack Snapshots](https://jitpack.io/v/iSnow/jReddit.svg)](https://jitpack.io/#iSnow/jReddit)
 
 ### What is jReddit?
-jReddit is a wrapper for the Reddit API written in Java. Project started by Omer Elnour. Taken over for further development and maintenance by [Karan Goel](https://github.com/karan), [Andrei Sfat](https://github.com/sfat), and [Simon Kassing](https://github.com/snkas).
+jReddit is a wrapper for the Reddit API written in Java. Project started by Omer Elnour. Taken over for further development and maintenance by [Karan Goel](https://github.com/karan), [Andrei Sfat](https://github.com/sfat), and [Simon Kassing](https://github.com/snkas). This is yet another fork as the project seems to be idle.
 
 ### How to use jReddit?
 *We are currently in the transitional phase between cookie-based authentication and OAuth2. The previous version of jReddit (1.0.3), which uses the former, will no longer be supported by reddit beginning August. The latter is supported by the latest version of jReddit (1.0.4).*
