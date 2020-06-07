@@ -9,12 +9,12 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 group = 'com.github.jreddit'
-version = '1.10-SNAPSHOT'
+version = '1.1.0-SNAPSHOT'
 
 description = """jReddit"""
 
 sourceCompatibility = 1.8
-targetCompatibility = 18
+targetCompatibility = 1.8
 
 configurations.all {
 }
