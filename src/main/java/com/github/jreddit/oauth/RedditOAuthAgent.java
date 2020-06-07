@@ -1,11 +1,10 @@
 package com.github.jreddit.oauth;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
-import javax.xml.bind.DatatypeConverter;
-
+import com.github.jreddit.oauth.app.RedditApp;
+import com.github.jreddit.oauth.exception.RedditOAuthException;
+import com.github.jreddit.oauth.param.RedditDuration;
+import com.github.jreddit.oauth.param.RedditScopeBuilder;
+import com.github.jreddit.request.util.KeyValueFormatter;
 import org.apache.oltu.oauth2.client.OAuthClient;
 import org.apache.oltu.oauth2.client.URLConnectionClient;
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest;
@@ -17,12 +16,10 @@ import org.apache.oltu.oauth2.common.exception.OAuthProblemException;
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 import org.apache.oltu.oauth2.common.message.types.GrantType;
 
-import com.github.jreddit.oauth.RedditToken;
-import com.github.jreddit.oauth.app.RedditApp;
-import com.github.jreddit.oauth.exception.RedditOAuthException;
-import com.github.jreddit.oauth.param.RedditDuration;
-import com.github.jreddit.oauth.param.RedditScopeBuilder;
-import com.github.jreddit.request.util.KeyValueFormatter;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 /**
  * Thread-safe reddit OAuth agent.<br>
@@ -183,7 +180,7 @@ public class RedditOAuthAgent {
      */
     private void addBasicAuthentication(OAuthClientRequest request, RedditApp app) {
         String authString = app.getClientID() + ":" + app.getClientSecret();
-        String authStringEnc = DatatypeConverter.printBase64Binary(authString.getBytes());
+        String authStringEnc = Base64.getEncoder().encodeToString(authString.getBytes());
         request.addHeader(HEADER_AUTHORIZATION, "Basic " + authStringEnc);
     }
     
