@@ -18,25 +18,25 @@ The latest version (1.1.0) can only be included from Jitpack or directly copying
 First add Jitpack to your repositories list:
 ```
 <repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 ```
 
 Then include it as a dependency
 ```
-	<dependency>
-	    <groupId>com.github.iSnow</groupId>
-	    <artifactId>jReddit</artifactId>
-	    <version>84780d47cd</version>
-	</dependency>
+<dependency>
+    <groupId>com.github.iSnow</groupId>
+    <artifactId>jReddit</artifactId>
+    <version>84780d47cd</version>
+</dependency>
 ```
 
 #### Old version (deprecated): 1.0.3
 
-At the moment, jReddit 1.0.3 can be included in your project using:
+jReddit 1.0.3 can be included in your project using:
 
 ##### Maven
 
