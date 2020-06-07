@@ -30,7 +30,7 @@ Then include it as a dependency
 <dependency>
     <groupId>com.github.iSnow</groupId>
     <artifactId>jReddit</artifactId>
-    <version>84780d47cd</version>
+    <version>9150c64696</version>
 </dependency>
 ```
 
