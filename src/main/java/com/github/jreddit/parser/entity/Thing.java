@@ -16,7 +16,6 @@ public abstract class Thing implements Comparable<Thing> {
      * 
      * @see <a href="http://www.reddit.com/dev/api#fullnames">Reddit API Reference for full names (section 'kind prefixes')</a>
      */
-    @JsonProperty("kind")
     protected Kind kind = null;
 
     /**
@@ -24,7 +23,6 @@ public abstract class Thing implements Comparable<Thing> {
      * 
      * @see <a href="http://www.reddit.com/dev/api#fullnames">Reddit API Reference for full names (section 'identifier')</a>
      */
-    @JsonProperty("id")
     protected String identifier = null;
     
     /**
@@ -33,7 +31,6 @@ public abstract class Thing implements Comparable<Thing> {
      *
      * @see <a href="http://www.reddit.com/dev/api#fullnames">Reddit API Reference for full names</a>
      */
-    @JsonProperty("name")
     protected String fullName = null;
 
     public Thing(){};
