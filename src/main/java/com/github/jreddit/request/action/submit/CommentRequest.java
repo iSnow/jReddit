@@ -15,7 +15,7 @@ public class CommentRequest extends RedditPostRequest {
     private String markdownText;
 
     /** Endpoint format. */
-    private static final String ENDPOINT_FORMAT = " /api/comment";
+    private static final String ENDPOINT_FORMAT = "/api/comment";
 
     public CommentRequest(Thing parent, JSONObject json) {
         this.addBodyParameter("parent", parent.getFullName());
