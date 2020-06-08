@@ -77,6 +77,7 @@ public class Submission extends Thing implements MixedListingElement {
     private Image source;
     private List<Image> resolutions = new ArrayList<>();
 
+    public Submission() {}
     /**
      * Create a Submission from a JSONObject
      *

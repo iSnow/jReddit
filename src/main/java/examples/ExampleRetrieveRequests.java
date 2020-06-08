@@ -42,7 +42,7 @@ public class ExampleRetrieveRequests {
     // Information about the app
     public static final String USER_AGENT = "jReddit: Reddit API Wrapper for Java";
     public static final String CLIENT_ID = "PfnhLt3VahLrbg";
-    public static final String REDIRECT_URI = "https://github.com/snkas/jReddit";
+    public static final String REDIRECT_URI = "https://github.com/jReddit/jReddit";
     
     // Variables
     private RedditApp redditApp;

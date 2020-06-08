@@ -1,5 +1,7 @@
 package com.github.jreddit.parser.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * This class represents a reddit "thing"
  *
@@ -14,14 +16,16 @@ public abstract class Thing implements Comparable<Thing> {
      * 
      * @see <a href="http://www.reddit.com/dev/api#fullnames">Reddit API Reference for full names (section 'kind prefixes')</a>
      */
-    protected final Kind kind;
+    @JsonProperty("kind")
+    protected Kind kind = null;
 
     /**
      * The identifier of this thing.
      * 
      * @see <a href="http://www.reddit.com/dev/api#fullnames">Reddit API Reference for full names (section 'identifier')</a>
      */
-    protected final String identifier;
+    @JsonProperty("id")
+    protected String identifier = null;
     
     /**
      * The full name of this thing.
@@ -29,8 +33,10 @@ public abstract class Thing implements Comparable<Thing> {
      *
      * @see <a href="http://www.reddit.com/dev/api#fullnames">Reddit API Reference for full names</a>
      */
-    protected final String fullName;
+    @JsonProperty("name")
+    protected String fullName = null;
 
+    public Thing(){};
     /**
      * Constructor. Must be called.
      * @param name Full name of the thing

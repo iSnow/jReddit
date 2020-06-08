@@ -87,7 +87,8 @@
         <org.eluder.coveralls.version>3.0.1</org.eluder.coveralls.version>
         <org.slf4j.version>1.7.12</org.slf4j.version>
         <org.apache.commons.io.version>2.7</org.apache.commons.io.version>
-        
+
+        <jackson-2-version>2.11.0</jackson-2-version>
         <!-- Versions of release plug-ins -->
         <maven.source.plugin.version>3.2.0</maven.source.plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -272,14 +273,39 @@
 			<version>${commons-validator-version}</version>
 			<scope>test</scope>
 		</dependency>
-    
+
         <!-- JSON parsing -->
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>${com.googlecode.jsonsimple.version}</version>
         </dependency>
-        
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-2-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-2-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>${jackson-2-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-2-version}</version>
+        </dependency>
+
+
         <!-- HTTP(s) protocol support -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
@@ -313,8 +339,8 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${org.slf4j.version}</version>
-        </dependency> 
-        
+        </dependency>
+
     </dependencies>
     
 </project>

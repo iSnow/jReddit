@@ -18,7 +18,7 @@ public class ExampleUserCodeFlowAuthorization {
         // Information about the app
         String userAgent = "jReddit: Reddit API Wrapper for Java";
         String clientID = "PfnhLt3VahLrbg";
-        String redirectURI = "https://github.com/snkas/jReddit";
+        String redirectURI = "https://github.com/jReddit/jReddit";
         
         // Reddit application
         RedditApp redditApp = new RedditInstalledApp(clientID, redirectURI);
