@@ -1,7 +1,5 @@
 package com.github.jreddit.parser.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 /**
  * This class represents a reddit "thing"
  *

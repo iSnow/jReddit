@@ -1,6 +1,5 @@
 package com.github.jreddit.request.action.submit;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.jreddit.parser.entity.Thing;
 import com.github.jreddit.request.RedditPostRequest;
 import org.json.simple.JSONObject;
