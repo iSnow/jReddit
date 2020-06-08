@@ -2,6 +2,7 @@ package com.github.jreddit.request.action.submit;
 
 import com.github.jreddit.parser.entity.Thing;
 import com.github.jreddit.request.RedditPostRequest;
+import com.github.jreddit.request.entity.SubmissionEntity;
 import org.json.simple.JSONObject;
 
 public class CommentRequest extends RedditPostRequest {
@@ -11,7 +12,6 @@ public class CommentRequest extends RedditPostRequest {
 
     private static String jsonRichText;
 
-    private Thing parent;
     private String markdownText;
 
     /** Endpoint format. */
@@ -27,6 +27,13 @@ public class CommentRequest extends RedditPostRequest {
         this.addBodyParameter("parent", parent.getFullName());
         this.addBodyParameter("text", text);
         this.addBodyParameter("api_type", API_TYPE);
+    }
+
+    public CommentRequest(SubmissionEntity entity, String text)  {
+        this.addBodyParameter("parent", entity.getFullName());
+        this.addBodyParameter("text", text);
+        this.addBodyParameter("api_type", API_TYPE);
+        this.addBodyParameter("return_rtjson", "true");
     }
 
     @Override
